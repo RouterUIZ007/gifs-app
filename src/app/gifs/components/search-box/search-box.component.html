@@ -1,5 +1,13 @@
-<h5>Buscar: </h5>
-<input type="text" class="form-control" placeholder="Buscar gifs... "
-    (keyup.enter)="seatchTag()"
-    #txtTagInput
->
+<!-- <h5>Buscar: </h5> -->
+<!-- <input type="text" class="form-control" placeholder="Buscar gifs... " (keyup.enter)="seatchTag()" #txtTagInput> -->
+
+<div class="flex items-center border-b border-gray-800 w-full py-2 mx-4">
+    <input
+        #txtTagInput
+        class="form-control appearance-none bg-transparent border-none w-full text-gray-800 mx-2 px-2 leading-tight focus:outline-none"
+        type="text" 
+        placeholder="Buscar gifs... " 
+        aria-label="Full name"
+        (keyup.enter)="seatchTag()"
+        >
+</div>
