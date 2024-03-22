@@ -1,8 +1,17 @@
-<div class="grid grid-flow-col auto-cols-max">
+<div class="grid grid-cols-4 gap-4">
 
-    <div
-        class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Title</h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Hi... World.</p>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg" 
+        *ngFor="let gif of gifs">
+        <img class="w-full" [src]="gif.images.downsized_medium.url" [alt]="gif.title">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">{{gif.title}}</div>
+            <p class="text-gray-700 text-base">{{gif.type}}
+            </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        </div>
     </div>
+
+
 </div>
