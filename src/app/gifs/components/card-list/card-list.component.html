@@ -1,17 +1,6 @@
 <div class="grid grid-cols-4 gap-4 px-4 mx-4">
 
-    <div class="max-w-sm rounded overflow-hidden shadow-lg" 
-        *ngFor="let gif of gifs">
-        <img class="w-full" [src]="gif.images.downsized_medium.url" [alt]="gif.title">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{{gif.title}}</div>
-            <p class="text-gray-700 text-base">{{gif.bitly_url}}
-            </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{gif.type}}</span>
-        </div>
-    </div>
+    <gifs-card *ngFor="let gif of gifs" [gif]="gif" class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-700"> </gifs-card>
 
 
 </div>

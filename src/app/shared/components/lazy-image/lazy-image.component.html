@@ -1,0 +1,17 @@
+
+<div class="grid grid-flow-row auto-rows-max">     
+    <img 
+        class="w-full p-2 animate__animated animate__fadeIn" 
+        [src]="url" 
+        [alt]="title"
+        (load)="onLoad()"
+        [ngStyle]="{ display: hasLoaded ? '' : 'none'}"
+    >
+    <div class="flex justify-center">
+        <img
+            *ngIf="!hasLoaded"
+            src="../../../../assets/rings.svg" 
+            class="m-2 "
+        >
+    </div>
+</div>

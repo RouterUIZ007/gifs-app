@@ -1,0 +1,17 @@
+
+
+    <!-- <img class="w-full" [src]="gif.images.downsized_medium.url" [alt]="gif.title"> -->
+    <shared-lazy-image
+        [url]="gif.images.downsized_medium.url"
+        [title]="gif.title || 'no title' "
+    ></shared-lazy-image>
+
+    <div class="px-6 py-4">
+        <div class="text-gray-50 font-bold text-xl mb-2">{{gif.title || 'no title'}}</div>
+        <p class="text-gray-50 text-base">{{gif.bitly_url || 'no Url'}}
+        </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <span
+            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{gif.type || 'no type'}}</span>
+    </div>
